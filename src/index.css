@@ -1,4 +1,8 @@
 @import "tailwindcss";
 @theme {
+
+    --color-primary: #FFD2A4;
+    --color-navbg: #0D0D0D;
+
   --font-robotoCondensed: "Roboto Condensed", sans-serif; 
 }
