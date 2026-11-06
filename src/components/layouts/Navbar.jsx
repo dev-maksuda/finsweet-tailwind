@@ -1,6 +1,8 @@
 import React from 'react'
 import Container from '../common/container'
 import logo from '../../assets/logo.png'
+import Image from '../ui/image'
+import Anchor from '../ui/anchor'
 
 const Navbar = () => {
   return (
@@ -8,10 +10,12 @@ const Navbar = () => {
       <Container className='relative'>
         <div className="">
             <div className="">
-                <img src={logo} alt="img"/>
+                <Anchor href="/">
+                    <img src={logo} alt="not found"/>
+                </Anchor>
             </div>
             <div className="">
-                <button>Contact</button>
+                <button className='bg-[#FFD2A4]'>Contact</button>
             </div>
         </div>
 
