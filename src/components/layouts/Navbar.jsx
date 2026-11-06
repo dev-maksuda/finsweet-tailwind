@@ -1,11 +1,20 @@
 import React from 'react'
 import Container from '../common/container'
+import logo from '../../assets/logo.png'
 
 const Navbar = () => {
   return (
-    <nav>
+    <nav className='bg-[#0D0D0D]'>
       <Container className='relative'>
-        <h1 className='bg-red-600'>hello</h1>
+        <div className="">
+            <div className="">
+                <img src={logo} alt="img"/>
+            </div>
+            <div className="">
+                <button>Contact</button>
+            </div>
+        </div>
+
       </Container>
     </nav>
   )
