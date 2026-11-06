@@ -5,7 +5,6 @@ import Image from '../ui/image'
 import Anchor from '../ui/anchor'
 import { menuData } from '../../dummyData/menuData'
 
-
 const Navbar = () => {
   return (
     <nav className='bg-navbg py-3'>
