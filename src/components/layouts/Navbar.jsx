@@ -15,7 +15,9 @@ const Navbar = () => {
                 </Anchor>
             </div>
             <div className="">
-                <button className='bg-[#FFD2A4]'>Contact</button>
+                <button className='bg-[#FFD2A4] px-12 py-5 uppercase font-normal text-base text-[#1C1D28] rounded-2xl font-robotoCondensed'>
+                Contact Us</button>
+                
             </div>
         </div>
 
