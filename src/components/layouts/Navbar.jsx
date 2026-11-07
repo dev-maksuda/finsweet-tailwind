@@ -4,7 +4,7 @@ import logo from '../../assets/logo.png'
 import Image from '../ui/image'
 import Anchor from '../ui/anchor'
 import { menuData } from '../../dummyData/menuData'
-
+import { FaBars } from "react-icons/fa6";
 const Navbar = () => {
   return (
     <nav className='bg-navbg py-3'>
@@ -30,8 +30,8 @@ const Navbar = () => {
             <div className="">
                 <button className='bg-primary px-12 py-5 uppercase font-normal text-base text-[#1C1D28] rounded-2xl font-robotoCondensed'>
                 Contact Us</button>
-                
             </div>
+            <FaBars />
         </div>
 
       </Container>
