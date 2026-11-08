@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
 import Container from '../common/container'
 import logo from '../../assets/logo.png'
 import Image from '../ui/image'
@@ -6,6 +7,8 @@ import Anchor from '../ui/anchor'
 import { menuData } from '../../dummyData/menuData'
 import { FaBars } from "react-icons/fa6";
 const Navbar = () => {
+  const [sidebarShow, setSidebarShow] = useState(false)
+
   return (
     <nav className='bg-navbg py-3'>
       <Container>
@@ -31,16 +34,49 @@ const Navbar = () => {
                 <button className='bg-primary px-12 py-5 uppercase font-normal text-base text-[#1C1D28] rounded-2xl font-robotoCondensed'>
                 Contact Us</button>
             </div>
-            <FaBars />
+            <button
+              type="button"
+              aria-label="Open navigation menu"
+              aria-expanded={sidebarShow}
+              onClick={() => setSidebarShow(true)}
+              className="text-white lg:hidden"
+            >
+              <FaBars />
+            </button>
         </div>
 
       </Container>
-      {sidebarShow &&
-  <div className={`absolute right-0 top-0 w-[300px] h-screen bg-red-600 z-20 lg:hidden
-  transition-all duration-300 ${sidebarShow ? 'translate-x-0' : 'translate-x-full'}`}>
-    <button onClick={() => setSidebarShow(false)}>Close</button>
-  </div>
-}
+      <AnimatePresence>
+        {sidebarShow && (
+          <>
+            <motion.button
+              type="button"
+              aria-label="Close navigation menu"
+              onClick={() => setSidebarShow(false)}
+              className="fixed inset-0 z-20 bg-black/50 lg:hidden"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.25 }}
+            />
+            <motion.aside
+              className="fixed right-0 top-0 z-30 h-screen w-[300px] bg-navbg p-6 lg:hidden"
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              transition={{ duration: 0.3, ease: 'easeInOut' }}
+            >
+              <button
+                type="button"
+                onClick={() => setSidebarShow(false)}
+                className="text-white"
+              >
+                Close
+              </button>
+            </motion.aside>
+          </>
+        )}
+      </AnimatePresence>
     </nav>
   )
 }
