@@ -35,6 +35,12 @@ const Navbar = () => {
         </div>
 
       </Container>
+      {sidebarShow &&
+  <div className={`absolute right-0 top-0 w-[300px] h-screen bg-red-600 z-20 lg:hidden
+  transition-all duration-300 ${sidebarShow ? 'translate-x-0' : 'translate-x-full'}`}>
+    <button onClick={() => setSidebarShow(false)}>Close</button>
+  </div>
+}
     </nav>
   )
 }
