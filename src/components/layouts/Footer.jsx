@@ -4,8 +4,8 @@ const Footer = () => {
   return (
 <footer className='bg-footerbg py-16'>
    <container>
-    <div className="">
-      
+    <div className="flex">
+
     </div>
 
     </container>
