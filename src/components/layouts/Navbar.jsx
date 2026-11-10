@@ -25,14 +25,14 @@ const Navbar = () => {
                     {item.label}
                   </Anchor>
                 </li>
-
               ))
               }
             </ul>
             </div>
-            <div className="hidden lg:block">
-                <button className='bg-primary px-12 py-5 uppercase font-normal text-base text-[#1C1D28] rounded-2xl font-robotoCondensed'>
-                Contact Us</button>
+            <div className="hidden lg:block mr-[110px]">
+
+            <button className='bg-primary px-12 py-5 uppercase font-normal text-base text-[#1C1D28] rounded-2xl font-robotoCondensed'>
+            Contact Us</button>
             </div>
             <button
               type="button"
