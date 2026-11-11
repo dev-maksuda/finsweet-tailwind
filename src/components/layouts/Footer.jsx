@@ -50,7 +50,7 @@ const Footer = () => {
                 <input 
                   type='email' 
                   placeholder='Yourmail@gmail.com' 
-                  className='h-full w-[80%] rounded-xl text-white font-robotoCondensed font-normal text-base placeholder:text-white pl-5 outline-none' 
+                  className='h-full w-[60%] rounded-xl text-white font-robotoCondensed font-normal text-base placeholder:text-white pl-5 outline-none' 
                 />
                 <button className='bg-primary h-full absolute right-0 top-0 rounded-xl px-16 font-robotoCondensed font-normal text-base cursor-pointer'>
                   Subscribe
