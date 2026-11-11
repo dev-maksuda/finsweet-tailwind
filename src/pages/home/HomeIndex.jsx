@@ -7,10 +7,8 @@ import Relevents from '../../components/pages/home/Relevants'
 const Homeindex = () => {
   return (
     <>
-      <Navbar />
       <Banner />
       <Relevents />
-      <Footer />
     </>
   )
 }
