@@ -18,13 +18,14 @@ export const companyInfo = [
     title: "finsweet@example.com"
   },
 ]
+
 const linkStyle = `font-robotoCondensed text-xs text-white uppercase`
 
 const Footer = () => {
   return (
     <footer className='bg-footerbg py-16'>
       <Container>
-        <div className='flex'>
+        <div className='flex justify-between'>
           <div>
             <Anchor href="/">
               <Image src={footerlogo} alt="logo" />
@@ -33,13 +34,30 @@ const Footer = () => {
               <span className={linkStyle}>© Copyright Finsweet 2022</span>
             </div>
             <ul className='mt-8 grid grid-cols-1 gap-4'>
-              {companyInfo.map((item, index) => (
-                <li key={item.id } className={linkStyle}>  {item.title} </li>
+              {companyInfo.map((item) => (
+                <li key={item.id} className={linkStyle}>
+                  {item.title}
+                </li>
               ))}
             </ul>
-
           </div>
-          <div></div>
+          <div>
+            <div className='w-[512px]'>
+              <h2 className='max-w-[377px] font-robotoCondensed text-white font-bold text-[32px] leading-11 uppercase'>
+                Subscribe to get Latest Updates and News
+              </h2>
+              <div className='border border-white/15 h-16 mt-8 rounded-xl relative'>
+                <input 
+                  type='email' 
+                  placeholder='Yourmail@gmail.com' 
+                  className='h-full w-[80%] rounded-xl text-white font-robotoCondensed font-normal text-base placeholder:text-white pl-5 outline-none' 
+                />
+                <button className='bg-primary h-full absolute right-0 top-0 rounded-xl px-16 font-robotoCondensed font-normal text-base cursor-pointer'>
+                  Subscribe
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </Container>
     </footer>
