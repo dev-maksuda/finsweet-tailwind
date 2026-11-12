@@ -7,7 +7,7 @@ const routes = createRoutesFromElements(
   <Route element={<RootLayout />}>
     <Route path="/" element={<HomeIndex />} />
     <Route path="/about" element={"aita about page"} />
-    <Route path="/blog" element={"aita blog page"} />
+    <Route path="/blog" element={"BlogIndex/"} />
     <Route path="*" element={<ErrorPage />} />
   </Route>
 );
