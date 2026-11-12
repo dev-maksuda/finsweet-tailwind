@@ -1,6 +1,6 @@
 import React from 'react'
 import Container from '../../common/Container'
-import bannerBg from '../../../assets/banner.png'
+import bannerBg from '../../../assets/banner.jpg'
 
 const Banner = () => {
   return (
