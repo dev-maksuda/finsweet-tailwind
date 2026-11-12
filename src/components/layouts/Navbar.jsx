@@ -25,10 +25,14 @@ const Navbar = () => {
             <ul className='hidden lg:flex items-center gap-12'>
               {menuData.map((item,index)=>(
                 <li key={index}>
-                  <NavLink to={item.url} className="font-normal text-base uppercase text-white
-                  font-robotoCondensed">
-                    {item.label}
+                  <NavLink to={item.url} className={`font-normal text-base uppercase
+                    font-robotoCondensed ${item.url === pathname.pathname ? "text-[#FFD2A4]" :
+                    "text-white"}`}>
+                      {item.label}
                   </NavLink>
+
+              
+
                 </li>
               ))
               }
