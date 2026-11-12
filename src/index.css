@@ -15,5 +15,7 @@
   --breakpoint-3xl: 1600px;
   --breakpoint-4xl: 1920px;
 }
-
+.nav_item.active{
+    color:#FFD2A4
+  }
 

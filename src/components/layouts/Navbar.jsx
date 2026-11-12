@@ -7,9 +7,13 @@ import Anchor from '../ui/anchor'
 import { menuData } from '../../dummyData/menuData'
 import { FaBars } from "react-icons/fa6";
 import { NavLink } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
+
 const Navbar = () => {
   const [sidebarShow, setSidebarShow] = useState(false)
-
+  const pathname = useLocation()
+  useEffect( () =>{},[])
+  console.log(pathname)
   return (
     <nav className='bg-navbg py-3'>
       <Container >
