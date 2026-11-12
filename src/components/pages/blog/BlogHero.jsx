@@ -1,8 +1,13 @@
 import React from 'react'
+import Container from '../../common/Container'
 
 const BlogHero = () => {
   return (
-    <div>BlogHero</div>
+    <section className='py-30 bg-blue-600'>
+        <Container>
+            <h2 className='text-center text-black font-bold font-roboto text-[80px]'>Blog</h2>
+        </Container>
+    </section>
   )
 }
 
