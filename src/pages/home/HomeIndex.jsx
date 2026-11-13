@@ -7,6 +7,7 @@ import LoveSection from '../../components/pages/home/LoveSection'
 import BenefitsSection from '../../components/pages/home/BenefitsSection'
 import SermonsSection from '../../components/pages/home/SermonsSection'
 import ServeSection from '../../components/pages/home/ServeSection'
+import BlogSection from '../../components/pages/home/BlogSection'
 
 const Homeindex = () => {
   return (
@@ -17,6 +18,7 @@ const Homeindex = () => {
       <BenefitsSection />
       <SermonsSection />
       <ServeSection />
+      <BlogSection />
     </>
   )
 }
