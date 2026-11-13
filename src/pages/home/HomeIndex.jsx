@@ -12,6 +12,7 @@ const Homeindex = () => {
       <Banner />
       <Relevents />
       <LoveSection />
+      <BenefitsSection />
     </>
   )
 }
