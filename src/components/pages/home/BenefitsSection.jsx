@@ -1,33 +1,17 @@
 import React from 'react'
-import Container from '../../common/Container'
+import Container from '../../common/container'
 import Image from '../../ui/image'
 
-import benefitImg1 from '../../../assets/benefit1.png'
-import benefitImg2 from '../../../assets/benefit2.png'
-import benefitImg3 from '../../../assets/benefit3.png'
-import benefitImg4 from '../../../assets/benefit4.png'
+import benefitImg1 from '../../../assets/benefitImg1.png'
+import benefitImg2 from '../../../assets/benefitImg2.png'
+import benefitImg3 from '../../../assets/benefitImg3.png'
+import benefitImg4 from '../../../assets/benefitImg4.png'
 
 const benefitsData = [
-  {
-    id: 1,
-    image: benefitImg1,
-    alt: "Benefit Card 1"
-  },
-  {
-    id: 2,
-    image: benefitImg2,
-    alt: "Benefit Card 2"
-  },
-  {
-    id: 3,
-    image: benefitImg3,
-    alt: "Benefit Card 3"
-  },
-  {
-    id: 4,
-    image: benefitImg4,
-    alt: "Benefit Card 4"
-  }
+  { id: 1, image: benefitImg1, alt: "Benefit Card 1" },
+  { id: 2, image: benefitImg2, alt: "Benefit Card 2" },
+  { id: 3, image: benefitImg3, alt: "Benefit Card 3" },
+  { id: 4, image: benefitImg4, alt: "Benefit Card 4" }
 ]
 
 const BenefitsSection = () => {
@@ -52,7 +36,6 @@ const BenefitsSection = () => {
               key={item.id} 
               className="h-[384px] overflow-hidden group cursor-pointer"
             >
-              {/* Card Image with Text Included */}
               <Image 
                 src={item.image} 
                 alt={item.alt} 
