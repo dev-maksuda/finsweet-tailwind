@@ -1,5 +1,5 @@
 import React from 'react'
-import Container from '../../common/container'
+import Container from '../../common/Container'
 import { FaQuoteRight } from "react-icons/fa6"
 
 import serveBg from '../../../assets/serve.jpg'

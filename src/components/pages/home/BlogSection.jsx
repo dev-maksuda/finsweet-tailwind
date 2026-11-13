@@ -1,5 +1,5 @@
 import React from 'react'
-import Container from '../../common/container'
+import Container from '../../common/Container'
 import Anchor from '../../ui/anchor'
 
 const blogData = [

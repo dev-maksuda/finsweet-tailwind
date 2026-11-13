@@ -1,5 +1,5 @@
 import React from 'react'
-import Container from '../../common/container'
+import Container from '../../common/Container'
 import Image from '../../ui/image'
 import Anchor from '../../ui/anchor'
 import { FaRegClock, FaArrowRightLong } from "react-icons/fa6"

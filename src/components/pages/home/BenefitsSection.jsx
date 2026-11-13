@@ -1,5 +1,5 @@
 import React from 'react'
-import Container from '../../common/container'
+import Container from '../../common/Container'
 import Image from '../../ui/image'
 
 import benefitImg1 from '../../../assets/benefitImg1.png'

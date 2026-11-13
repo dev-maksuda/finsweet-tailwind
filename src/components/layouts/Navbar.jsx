@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import Container from '../common/container'
+import Container from '../common/Container'
 import logo from '../../assets/logo.png'
 import Image from '../ui/image'
 import Anchor from '../ui/anchor'
