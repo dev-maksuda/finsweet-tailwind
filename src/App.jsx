@@ -1,13 +1,15 @@
 import ErrorPage from "./components/common/ErrorPage";
 import RootLayout from "./components/layouts/RootLayout";
 import HomeIndex from "./pages/home/HomeIndex";
-import { BrowserRouter, Routes, Route, createRoutesFromElements, createBrowserRouter, RouterProvider } from "react-router-dom";
+import AboutIndex from "./components/pages/about/AboutIndex";
+import BlogIndex from "./pages/blog/BlogIndex";
+import { Route, createRoutesFromElements, createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const routes = createRoutesFromElements(
   <Route element={<RootLayout />}>
     <Route path="/" element={<HomeIndex />} />
-    <Route path="/about" element={"AboutInd"} />
-    <Route path="/blog" element={"BlogIndex/"} />
+    <Route path="/about" element={<AboutIndex />} />
+    <Route path="/blog" element={<BlogIndex />} />
     <Route path="*" element={<ErrorPage />} />
   </Route>
 );
