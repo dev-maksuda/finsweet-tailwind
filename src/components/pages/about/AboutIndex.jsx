@@ -6,6 +6,15 @@ const AboutIndex = () => {
 
   const url = 'https://jsonplaceholder.typicode.com/posts'
   
+  const fetchData = async () => {
+  try {
+    const response = await axios.get(url);
+    console.log(response);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
 
   return (
     <div className='py-20'>
