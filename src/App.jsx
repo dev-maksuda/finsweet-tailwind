@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route, createRoutesFromElements, createBrowserRo
 const routes = createRoutesFromElements(
   <Route element={<RootLayout />}>
     <Route path="/" element={<HomeIndex />} />
-    <Route path="/about" element={"AboutIndex"} />
+    <Route path="/about" element={"AboutInd"} />
     <Route path="/blog" element={"BlogIndex/"} />
     <Route path="*" element={<ErrorPage />} />
   </Route>

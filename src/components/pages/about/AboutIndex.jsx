@@ -5,15 +5,19 @@ import axios from 'axios';
 const AboutIndex = () => {
 
   const url = 'https://jsonplaceholder.typicode.com/posts'
-  
+
   const fetchData = async () => {
+    const [count, setCount] = useState(0)
+    const [post, setPost] = useState([])
+
   try {
     const response = await axios.get(url);
-    console.log(response);
+    setPost (response.data);
   } catch (error) {
     console.error(error);
   }
 }
+fetchData()
 
 
   return (
