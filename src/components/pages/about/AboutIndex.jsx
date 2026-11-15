@@ -1,9 +1,11 @@
 import React from 'react'
 import Container from '../../components/common/Container'
+import axios from 'axios';
 
 const AboutIndex = () => {
 
   const url = 'https://jsonplaceholder.typicode.com/posts'
+  
 
   return (
     <div className='py-20'>
