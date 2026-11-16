@@ -31,7 +31,7 @@ const AboutIndex = () => {
         <div className="grid grid-cols-3 gap-6">
           {product.length > 0 ? (
             product?.map((item, index) => {
-              if (item.id % 2 == 0) {
+            
                 return (
                   <div key={index} className="bg-primary p-10">
                     <span>{item.id || <Skeleton count={1} />}</span>
@@ -45,7 +45,6 @@ const AboutIndex = () => {
                     <p className="mt-3 font-bold">Price: ${item.price}</p>
                   </div>
                 );
-              }
             })
           ) : (
             [0,1,2,3,4,5,6,7,8].map((item, index) => (
