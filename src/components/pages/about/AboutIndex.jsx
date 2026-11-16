@@ -6,48 +6,91 @@ import 'react-loading-skeleton/dist/skeleton.css'
 
 const AboutIndex = () => {
   const url = 'https://dummyjson.com/products'
-  const [count, setCount] = useState(0)
   const [product, setProduct] = useState([])
+  const [formData, setFormData] = useState({
+    productName: '',
+    details: '',
+    price: ''
+  })
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(url)
-        setProduct(response.data.products)
+        setProduct(response.data?.products || [])
       } catch (error) {
         console.error(error)
       }
     }
     fetchData()
-  }, [count])
+  }, [])
+
+  const handleFormChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    })
+  }
+
+  const handleForm = () => {
+    console.log(formData)
+  }
 
   return (
     <div className="py-20">
       <Container>
-        <button onClick={() => setCount(count + 1)}>Increment</button>
-        <h1 className="text-4xl">{count}</h1>
-        <button onClick={() => setCount(count - 1)}>Decrement</button>
-        
+        <div className="flex flex-col gap-4 items-start mb-10">
+          <h4>Create Product</h4>
+
+          <input 
+            onChange={handleFormChange} 
+            type="text" 
+            name="productName" 
+            placeholder="Product Name" 
+            className="border" 
+          />
+          <input 
+            onChange={handleFormChange} 
+            type="text" 
+            name="details" 
+            placeholder="Product Details" 
+            className="border" 
+          />
+          <input 
+            onChange={handleFormChange} 
+            type="number" 
+            name="price" 
+            placeholder="price" 
+            className="border" 
+          />
+          <button onClick={handleForm} className="bg-primary px-8 py-3">
+            Submit
+          </button>
+        </div>
+
         <div className="grid grid-cols-3 gap-6">
-          {product.length > 0 ? (
+          {product?.length > 0 ? (
             product?.map((item, index) => {
-            
-                return (
-                  <div key={index} className="bg-primary p-10">
-                    <span>{item.id || <Skeleton count={1} />}</span>
-                    <img src={item.thumbnail} alt={item.title} className="w-full h-40 object-contain my-3" />
-                    <h3 className="text-xl font-bold">
-                      {item.title || <Skeleton count={1} />}
-                    </h3>
-                    <p className="mt-5">
-                      {item.description || <Skeleton count={1} />}
-                    </p>
-                    <p className="mt-3 font-bold">Price: ${item.price}</p>
-                  </div>
-                );
+              return (
+                <div key={index} className="bg-primary p-10">
+                  <span>{item.id || <Skeleton count={1} />}</span>
+                  <img 
+                    src={item.images?.[0]} 
+                    alt="not found" 
+                    className="w-full h-40 object-contain my-3" 
+                  />
+                  <h3 className="text-xl font-bold">
+                    {item.title || <Skeleton count={1} />}
+                  </h3>
+                  <p className="mt-5">
+                    {item.description || <Skeleton count={1} />}
+                  </p>
+                  <p className="mt-3 font-bold">Price: ${item.price}</p>
+                </div>
+              );
             })
           ) : (
-            [0,1,2,3,4,5,6,7,8].map((item, index) => (
+            [0, 1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
               <div key={item} className="bg-primary p-10">
                 <span>
                   <Skeleton count={1} />
