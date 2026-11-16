@@ -5,15 +5,15 @@ import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 
 const AboutIndex = () => {
-  const url = ''https://dummyjson.com/products''
+  const url = 'https://dummyjson.com/products'
   const [count, setCount] = useState(0)
-  const [post, setPost] = useState([])
+  const [product, setProduct] = useState([])
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(url)
-        setPost(response.data)
+        setProduct(response.data.products)
       } catch (error) {
         console.error(error)
       }
@@ -29,18 +29,20 @@ const AboutIndex = () => {
         <button onClick={() => setCount(count - 1)}>Decrement</button>
         
         <div className="grid grid-cols-3 gap-6">
-          {post.length > 0 ? (
-            post?.map((item, index) => {
+          {product.length > 0 ? (
+            product?.map((item, index) => {
               if (item.id % 2 == 0) {
                 return (
                   <div key={index} className="bg-primary p-10">
                     <span>{item.id || <Skeleton count={1} />}</span>
+                    <img src={item.thumbnail} alt={item.title} className="w-full h-40 object-contain my-3" />
                     <h3 className="text-xl font-bold">
                       {item.title || <Skeleton count={1} />}
                     </h3>
                     <p className="mt-5">
-                      {item.body || <Skeleton count={1} />}
+                      {item.description || <Skeleton count={1} />}
                     </p>
+                    <p className="mt-3 font-bold">Price: ${item.price}</p>
                   </div>
                 );
               }
