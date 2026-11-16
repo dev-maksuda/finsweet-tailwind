@@ -23,6 +23,7 @@ const AboutIndex = () => {
         console.error(error)
       }
     }
+    
     fetchData()
   }, [])
 
