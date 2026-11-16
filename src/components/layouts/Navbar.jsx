@@ -12,8 +12,8 @@ import { useLocation } from 'react-router-dom'
 const Navbar = () => {
   const [sidebarShow, setSidebarShow] = useState(false)
   const pathname = useLocation()
-  // useEffect( () =>{},[])
-  // console.log(pathname)
+  useEffect( () =>{},[])
+  console.log(pathname)
   return (
     <nav className='bg-navbg py-3'>
       <Container >
