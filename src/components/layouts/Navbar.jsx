@@ -30,9 +30,6 @@ const Navbar = () => {
                     "text-white"}`}>
                       {item.label}
                   </NavLink>
-
-              
-
                 </li>
               ))
               }
