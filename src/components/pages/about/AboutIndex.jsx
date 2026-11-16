@@ -5,7 +5,7 @@ import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 
 const AboutIndex = () => {
-  const url = 'https://jsonplaceholder.typicode.com/posts'
+  const url = ''https://dummyjson.com/products''
   const [count, setCount] = useState(0)
   const [post, setPost] = useState([])
 
@@ -42,19 +42,21 @@ const AboutIndex = () => {
                       {item.body || <Skeleton count={1} />}
                     </p>
                   </div>
-                )
+                );
               }
             })
           ) : (
-            // Data load howar somoy ei skeleton card gulo dekhabe
-            Array.from({ length: 6 }).map((_, index) => (
-              <div key={index} className="bg-primary p-10">
-                <span><Skeleton count={1} width={40} /></span>
-                <h3 className="text-xl font-bold mt-2">
+            [0,1,2,3,4,5,6,7,8].map((item, index) => (
+              <div key={item} className="bg-primary p-10">
+                <span>
+                  <Skeleton count={1} />
+                </span>
+                <h3 className="text-xl font-bold">
                   <Skeleton count={1} />
                 </h3>
                 <p className="mt-5">
-                  <Skeleton count={3} />
+                  {" "}
+                  <Skeleton count={1} />{" "}
                 </p>
               </div>
             ))
