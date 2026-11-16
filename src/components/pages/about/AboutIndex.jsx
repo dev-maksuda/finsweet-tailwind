@@ -6,7 +6,7 @@ import 'react-loading-skeleton/dist/skeleton.css'
 
 const AboutIndex = () => {
   const url = 'https://dummyjson.com/products'
-  const addProductUrl = "https://dummyjson.com/add"
+  const addProductUrl = "https://dummyjson.com/products/add"
   const [product, setProduct] = useState([])
   const [formData, setFormData] = useState({
     productName: '',
@@ -27,15 +27,19 @@ const AboutIndex = () => {
   }, [])
 
   const handleFormChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    })
-  }
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
 
-  const handleForm = () => {
-    console.log(formData)
-  }
+  const handleForm = async () => {
+    console.log(formData);
+    const response = await axios.post(addProductUrl, {
+      title: formData.productName,
+      description: formData.details,
+      price: formData.price,
+    });
+    console.log(response);
+  };
 
   return (
     <div className="py-20">
