@@ -6,6 +6,7 @@ import 'react-loading-skeleton/dist/skeleton.css'
 
 const AboutIndex = () => {
   const url = 'https://dummyjson.com/products'
+  const addProductUrl = "https://dummyjson.com/add"
   const [product, setProduct] = useState([])
   const [formData, setFormData] = useState({
     productName: '',
